@@ -1,0 +1,22 @@
+class Hospital:
+    def __init__(self, nombre, camas, doctores):
+        self.nombre = nombre
+        self.camas = camas
+        self.doctores = doctores
+
+    def presentar(self):
+        print("El hospital {} se llama {} y tiene {} camas y {} doctores".format(self.nombre, self.nombre, self.camas, self.doctores))
+
+    def __str__(self):
+        return "Hospital: {}, Camas: {}, Doctores: {}".format(self.nombre, self.camas, self.doctores)
+
+# Ingresar valores por teclado
+nombre = input("Ingrese el nombre del hospital: ")
+camas = input("Ingrese el número de camas del hospital: ")
+doctores = input("Ingrese el número de doctores que tiene el hospital: ")
+
+# Crear instancia de la clase Hospital con los valores ingresados
+hosp = Hospital(nombre, int(camas), int(doctores))
+
+# Presentar objeto utilizando el método __str__
+print(hosp)
